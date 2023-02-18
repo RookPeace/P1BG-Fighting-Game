@@ -8,9 +8,11 @@ Complete the planning sections below and include them in the README.md of your p
 
 ## Project Description
 
-This is a game made with the help of Chris Crouse's tutorial on fighting games https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=76&ab_channel=ChrisCourses
+This is a game made with the help of Chris Crouse's tutorial on fighting games https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=76&ab_channel=ChrisCourses 
+This will be a two player fighting game that can be played on one keyboard with the option of mapping controls onto a controller
 
 ## Game Logic
+
 
 ```
 Replace this text with pseudocode.
@@ -48,7 +50,7 @@ Describe the logic that evaluates the player's victory/loss/progress status.
 | Date      | Goals                                                                    |
 | --------- | ------------------------------------------------------------------------ |
 | Mon. 2/13 | Create GitHub repository. Complete README.md.                            |
-| Wed. 2/15 |                                                                          |
+| Wed. 2/15 |Project Set Up                                                                          |
 | Sat. 2/18 |                                                                          |
 | Mon. 2/20 |                                                                          |
 | Wed. 2/22 |                                                                          |
