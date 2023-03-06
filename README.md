@@ -51,7 +51,7 @@ Describe the logic that evaluates the player's victory/loss/progress status.
 | --------- | ------------------------------------------------------------------------ |
 | Mon. 2/13 | Create GitHub repository. Complete README.md.                            |
 | Wed. 2/15 |Project Set Up                                                                          |
-| Sat. 2/18 |                                                                          |
-| Mon. 2/20 |                                                                          |
-| Wed. 2/22 |                                                                          |
+| Sat. 2/18 |Create Player and Enemy                                                                          |
+| Mon. 2/20 |Movement and Attacks                                                                         |
+| Wed. 2/22 |Interfaces                                                                          |
 | Sat. 2/25 | Deploy to GitHub Pages. Submit completed project. Project presentations. |
