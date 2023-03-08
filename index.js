@@ -151,7 +151,7 @@ if(
      player.attacking
      )  {
         player.attacking = false
-    console.log('player 1 is attacking');
+    document.querySelector('#enemyHealth').style.width='20%'
 }
 
 
