@@ -25,6 +25,7 @@ class soul {
         }
         this.color = color
         this.attacking
+        this.health = 100
     }
     draw(){
         cc.fillStyle = this.color
@@ -151,7 +152,8 @@ if(
      player.attacking
      )  {
         player.attacking = false
-    document.querySelector('#enemyHealth').style.width='20%'
+        enemy.health -= 20
+    document.querySelector('#enemyHealth').style.width=enemy.health + "%"
 }
 
 
@@ -164,7 +166,8 @@ if(
      enemy.attacking
      )  {
         enemy.attacking = false
-    console.log('player 2 is attacking');
+        player.health -= 20
+        document.querySelector('#playerHealth').style.width=player.health + "%"
 }
 }
 animate()
