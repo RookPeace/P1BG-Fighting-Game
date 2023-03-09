@@ -118,8 +118,34 @@ const keys = {
         
     }
 
+    function determineWinner({player, enemy, timerId}){
+        clearTimeout(timerId)
+        document.querySelector('#displayText').style.display='flex'
+        if(player.health === enemy.health){
+            document.querySelector('#displayText').innerHTML = 'Tie'
+          }else if(player.health > enemy.health){
+            document.querySelector('#displayText').innerHTML = 'Player 1 Wins'
+          }
+          else if(player.health < enemy.health){
+              document.querySelector('#displayText').innerHTML = 'Player 2 Wins'
+          }
+    }
 
+let timer = 60
+let timerId
+function decreaseTimer(){ 
+    if (timer>0) { 
+        timerId = setTimeout(decreaseTimer, 1000)
+        timer--
+        document.querySelector('#timer').innerHTML = timer
+    }
+if (timer === 0){
+    
+    determineWinner({player,enemy,timerId})
+}
+}
 
+decreaseTimer()
 function animate() {
     window.requestAnimationFrame(animate)
     cc.fillStyle ='black'
@@ -130,17 +156,17 @@ function animate() {
     enemy.velocity.x = 0
     //Player 1 movement
     if (keys.a.pressed && player.lastKey === 'a') {
-        player.velocity.x =-1
+        player.velocity.x =-4
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 1
+        player.velocity.x = 4
     }
 
      //Player 2 movement
      
      if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-        enemy.velocity.x =-1
+        enemy.velocity.x =-4
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-        enemy.velocity.x = 1
+        enemy.velocity.x = 4
     }
     // detect for collision
 if(
@@ -169,7 +195,16 @@ if(
         player.health -= 20
         document.querySelector('#playerHealth').style.width=player.health + "%"
 }
+
+//A player wins the fight
+if(enemy.health<=0 || player.healthth<=0){
+    determineWinner({player,enemy,timerId})
 }
+
+}
+
+
+
 animate()
 
 window.addEventListener('keydown', (event) => {
